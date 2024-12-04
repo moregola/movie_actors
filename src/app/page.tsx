@@ -1,101 +1,65 @@
 import Image from "next/image";
+import Table from "./component/table";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+   <div className="container justify-items-center mt-10">
+      <Table headers={["Name", "Director", "Year","Photo", "Action"]} movies={[
+         {
+          id: "d53f8e7a-91af-4df5-8b96-1f2c1d34c9d8",
+          title: "Inception",
+          genre: "Sci-Fi",
+          director: "Christopher Nolan",
+          producer: "Emma Thomas",
+          releaseDate: new Date("2010-07-16"),
+          description: "A skilled thief is given a chance at redemption if he can successfully perform inception.",
+          actors: [
+            {
+              id: "d1f5c7e9-8f56-4e47-bbeb-5f7e3a6c3d9a",
+              name: "Leonardo DiCaprio",
+              age: 48,
+              state: "California",
+              city: "Los Angeles",
+              country: "USA",
+              movies: [],
+              birthDate: new Date("1974-11-11"),
+              nationality: "American",
+              photo: "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_Dicaprio_Cannes_2019.jpg"
+            }
+          ],
+          movieRating: {
+            rating: 8.8
+          },
+          photo: "https://upload.wikimedia.org/wikipedia/pt/8/84/AOrigemPoster.jpg"
+        },
+        {
+          id: "a23f9e9c-1234-4edf-bbbc-7d9e2f4c6c3f",
+          title: "The Matrix",
+          genre: "Action",
+          director: "The Wachowskis",
+          producer: "Joel Silver",
+          releaseDate: new Date("1999-03-31"),
+          description: "A hacker discovers the shocking truth about reality and his role in the war against its controllers.",
+          actors: [
+            {
+              id: "c9a3e7d1-2f34-4dcd-aef7-5b6c1d9e2c5b",
+              name: "Keanu Reeves",
+              age: 59,
+              state: "California",
+              city: "Los Angeles",
+              country: "USA",
+              movies: [],
+              birthDate: new Date("1964-09-02"),
+              nationality: "Canadian",
+              photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/LanaDRPrimavera310524_%2810_of_155%29_%2853765300307%29_%28cropped%29.jpg/1024px-LanaDRPrimavera310524_%2810_of_155%29_%2853765300307%29_%28cropped%29.jpg"
+            }
+          ],
+          movieRating: {
+            rating: 8.7
+          },
+          photo: "https://upload.wikimedia.org/wikipedia/pt/c/c1/The_Matrix_Poster.jpg"
+        }
+      ]}/>
+   </div>
   );
 }
