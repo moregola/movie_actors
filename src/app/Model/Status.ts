@@ -1,4 +1,3 @@
-export default interface StatusResponse
-{
-    status:boolean;
+export default interface StatusResponse {
+  status: boolean;
 }

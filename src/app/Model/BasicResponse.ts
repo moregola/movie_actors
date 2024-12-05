@@ -1,4 +1,4 @@
 export interface BasicResponse<T> {
-    content: T;
-    message: string;
+  content: T;
+  message: string;
 }

@@ -26,7 +26,7 @@ export default function Table({
     </thead>
   );
   const tableRow = () => {
-   return (
+    return (
       <tbody>
         {data.map((item, index) => {
           if (isMovie(item)) {
@@ -86,7 +86,7 @@ export default function Table({
           }
         })}
       </tbody>
-   )
+    );
   };
 
   return (
