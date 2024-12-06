@@ -18,8 +18,8 @@ export default async function handler(
       actors,
       {
         headers: {
-          Authorization: `${API_KEY}`,
-          "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+            "Content-Type": "application/json",
         },
       }
     );

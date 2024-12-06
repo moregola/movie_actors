@@ -28,7 +28,8 @@ export default function Table({
   const tableRow = () => {
     return (
       <tbody>
-        {data.map((item, index) => {
+        
+        {data.length > 0 && data.map((item, index) => {
           if (isMovie(item)) {
             return (
               <tr key={index + item.id} className="bg-white border-b">

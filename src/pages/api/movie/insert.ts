@@ -18,8 +18,8 @@ export default async function handler(
       movies,
       {
         headers: {
-          Authorization: `${API_KEY}`,
-          "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+            "Content-Type": "application/json",
         },
       }
     );

@@ -17,8 +17,8 @@ export default async function handler(
       `${API_URL}/actor/${id}`,
       {
         headers: {
-          Authorization: `${API_KEY}`,
-          "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+            "Content-Type": "application/json",
         },
       }
     );

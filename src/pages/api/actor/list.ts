@@ -12,12 +12,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+    console.log(`Bearer ${API_KEY}`)
     const response = await axios.get<BasicResponse<Actor[]>>(
       `${API_URL}/actor/all`,
       {
         headers: {
-          Authorization: `${API_KEY}`,
-          "Content-Type": "application/json",
+            "Authorization": `Bearer ${API_KEY}`,
+            "Content-Type": "application/json",
         },
       }
     );

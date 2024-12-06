@@ -11,14 +11,15 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  try {
+
+    try {
     const { id } = req.query;
     const response = await axios.delete<BasicResponse<StatusResponse>>(
       `${API_URL}/movie/${id}`,
       {
         headers: {
-          Authorization: `${API_KEY}`,
-          "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+            "Content-Type": "application/json",
         },
       }
     );

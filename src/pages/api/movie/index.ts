@@ -14,7 +14,7 @@ export default async function handler(
     const { id } = req.query;
     const response = await axios.get<Movie>(`${API_URL}/movie/${id}`, {
       headers: {
-        Authorization: `${API_KEY}`,
+        Authorization: `Bearer ${API_KEY}`,
         "Content-Type": "application/json",
       },
     });
