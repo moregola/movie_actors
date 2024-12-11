@@ -15,7 +15,7 @@ export default function Actors() {
     fetchActors();
   }, []);
   return (
-    <div className="container justify-items-center mt-10">
+    <div className="container justify-items-center mt-10 mx-5">
       <Table
         headers={["Name", "Nationality", "Age", "Photo", "Action"]}
         data={actors}

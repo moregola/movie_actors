@@ -10,14 +10,15 @@ export default function Movies() {
   useEffect(() => {
     async function fetchMovies() {
       const response = await fetch('/api/movie/list');
-      const data = await response.json();
+      const data = await response.json() as Movie[];
       setMovies(data);
+
     }
-    fetchMovies();
+    fetchMovies()
   }, []);
 
   return (
-    <div className="container justify-items-center mt-10">
+    <div className="container justify-items-center mt-10 mx-5">
       <Table
         headers={["Title", "Director", "Year", "Photo", "Action"]}
         data={movies}
